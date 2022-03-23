@@ -93,3 +93,10 @@ df_coins = df_selected_coin[:num_coin]
 percent_timeframe = col1.selectbox('Percent Change Time Frame', ['7d', '24h', '1h'])
 percent_dict = {"7d":'percent_change_7d', "24h":'percent_change_24h', "1h":'percent_change_1h'}
 selected_percent_timeframe = percent_dict[percent_timeframe]
+
+## Sidebar - Sorting Values
+sort_values = col1.selectbox('Sort Values', ['Yes', 'No'])
+col2.subheader('Price Data of Selected Cryptocurrency')
+col2.write('Data Dimension: ' + str(df_selected_coin.shape[0]))
+
+col2.dataframe(df_coins)
