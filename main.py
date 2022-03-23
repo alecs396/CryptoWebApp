@@ -72,11 +72,15 @@ def load_data():
         df['market_cap'] = market_cap
         df['volume_24h'] = volume_24h
       
-        print(df)
+        return df
     except (ConnectionError, Timeout, TooManyRedirects) as e:
         print(e)
     
 
 df = load_data()
 
+## Sidebar - Crypto Selections
+sorted_coin = sorted(df['coin_symbol'])
+selected_coin = col1.multiselect('Cryptocurrency', sorted_coin, sorted_coin)
 
+df_selected_coin = df[(df['coin_symbol'].isin(selected_coin))]
