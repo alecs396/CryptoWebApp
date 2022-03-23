@@ -1,7 +1,7 @@
 # Overview
+This is a web app that shows crypto data of the top 100 coins.  This was made in python using streamlit.  A large part of this code was from the Streamlit Tutorial found in the links below.  Streamlit makes it incredibly easy to create web apps in python and it is an INCREDIBLY fun tool to use.
 
-
-[Software Demo Video](https://youtu.be/j-bclWbBePY)
+[Software Demo Video](https://youtu.be/OvdDMYl_KUg)
 
 # Development Environment
 
@@ -13,12 +13,10 @@
 
 # Useful Websites
 
-* [Binance.us](binance.us/en/)
-* [Binance.us API Documentation](https://docs.binance.us/?python#introduction)
-* [python-binance Documentation](https://python-binance.readthedocs.io/en/latest/overview.html)
-* [MPLfinance Documentation](https://pypi.org/project/mplfinance/)
+* [Coin Market Cap](https://coinmarketcap.com/)
+* [Coin Market Cap API Documentation](https://coinmarketcap.com/api/documentation/v1/#)
+* [Streamlit Documentation](https://docs.streamlit.io/)
+* [Streamlit Tutorial](https://www.youtube.com/watch?v=JwSS70SZdyM)
 
 # Next Things to do
-* Enable the viewing of more assets
-* Interactive Graphs
-* Searching for specific assets you want to see
+* Enable the user to select different currencies (USDT/BTC)
