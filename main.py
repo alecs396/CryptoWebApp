@@ -100,3 +100,12 @@ col2.subheader('Price Data of Selected Cryptocurrency')
 col2.write('Data Dimension: ' + str(df_selected_coin.shape[0]))
 
 col2.dataframe(df_coins)
+
+# Preparing Data for Bar plot of % Change
+col2.subheader('Table of % Proce Change')
+df_change = pd.concat([df_coins.coin_symbol, df_coins.percent_change_1h, df_coins.percent_change_24h, df_coins.percent_change_7d], axis=1)
+df_change = df_change.set_index('coin_symbol')
+df_change['positive_percent_change_1h'] = df_change['percent_change_1h'] > 0
+df_change['positive_percent_change_24h'] = df_change['percent_change_24h'] > 0
+df_change['positive_percent_change_7d'] = df_change['percent_change_7d'] > 0
+col2.dataframe(df_change)
